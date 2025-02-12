@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcast Marketplace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    main {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .podcast-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .podcast-card:hover {
+      transform: scale(1.05);
+    }
+
+    .podcast-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.5em;
+    }
+
+    .podcast-card p {
+      margin: 10px 0 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .podcast-card button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .podcast-card button.listen {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .podcast-card button.listen:hover {
+      background-color: #218838;
+    }
+
+    .podcast-card #paypal-button-container {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .podcast-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Podcast Marketplace</h1>
+    <p>Discover and purchase your favorite podcasts.</p>
+  </header>
+
+  <main>
+    <!-- Podcast Card Example 1 -->
+    <div class="podcast-card" data-podcast-id="1">
+      <h2>Monetizing Your YouTube Channel in 28 Days</h2>
+      <p>This MP3 discusses how to monetize a YouTube channel in 28 days by choosing a profitable niche, creating viral content, and focusing on viewer retention. It provides a blueprint to understand how to get views, keep viewers engaged, and stand out in a crowded market.</p>
+      <button class="listen" onclick="playExcerpt(this)">Listen to excerpt</button>
+      <style>.pp-3KYVDAWT2GUNN{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+      <form action="https://www.paypal.com/ncp/payment/3KYVDAWT2GUNN" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+      <input class="pp-3KYVDAWT2GUNN" type="submit" value="Download Full mp3" />
+      <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+      <section> Optimisé par <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+      </form>
+      <div id="paypal-button-container-1"></div>
+      <audio class="audio-excerpt" src="Monetizing Your YouTube Channel in 28 Days exerpt.mp3"></audio>
+      <a class="mp3-link" href="Monetizing Your YouTube Channel in 28 Days.mp3" download style="display: none;"></a>
+    </div>
+
+    <!-- Podcast Card Example 2 -->
+    <div class="podcast-card" data-podcast-id="2">
+      <h2>Podcast Title 2</h2>
+      <p>This is a brief description of the second podcast.</p>
+      <button class="listen" onclick="playExcerpt(this)">Listen to excerpt</button>
+      <style>.pp-3KYVDAWT2GUNN{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+      <form action="https://www.paypal.com/ncp/payment/3KYVDAWT2GUNN" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+      <input class="pp-3KYVDAWT2GUNN" type="submit" value="Download Full mp3" />
+      <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+      <section> Optimisé par <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+      </form>
+      <div id="paypal-button-container-2"></div>
+      <audio class="audio-excerpt" src="https://example.com/podcast2_excerpt.mp3"></audio>
+    </div>
+
+    <!-- Podcast Card Example 3 -->
+    <div class="podcast-card" data-podcast-id="3">
+      <h2>Podcast Title 3</h2>
+      <p>This is a brief description of the third podcast.</p>
+      <button class="listen" onclick="playExcerpt(this)">Listen to excerpt</button>
+      <style>.pp-3KYVDAWT2GUNN{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+      <form action="https://www.paypal.com/ncp/payment/3KYVDAWT2GUNN" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+      <input class="pp-3KYVDAWT2GUNN" type="submit" value="Download Full mp3" />
+      <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+      <section> Optimisé par <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+      </form>
+      <div id="paypal-button-container-3"></div>
+      <audio class="audio-excerpt" src="https://example.com/podcast3_excerpt.mp3"></audio>
+    </div>
+  </main>
+
+  <!-- Intégrez le script PayPal avant la fermeture de la balise body -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
+  <script>
+    function playExcerpt(button) {
+      const card = button.closest('.podcast-card');
+      const audio = card.querySelector('.audio-excerpt');
+      audio.currentTime = 0; // Restart audio if already played
+      audio.play();
+    }
+
+    // Initialisation des boutons PayPal pour chaque podcast
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '1.00' // Montant de 1€
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Payment successful! You can now download the MP3.');
+        });
+      }
+    }).render('#paypal-button-container-1'); // Pour le premier podcast
+
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '1.00' // Montant de 1€
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Payment successful! You can now download the MP3.');
+        });
+      }
+    }).render('#paypal-button-container-2'); // Pour le deuxième podcast
+
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '1.00' // Montant de 1€
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Payment successful! You can now download the MP3.');
+        });
+      }
+    }).render('#paypal-button-container-3'); // Pour le troisième podcast
+  </script>
+</body>
+</html>
